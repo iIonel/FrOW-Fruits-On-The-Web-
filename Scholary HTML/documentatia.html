@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+            user-scalable=yes" />
+    <title>FruitsOnTheWeb</title>
+    <link rel="stylesheet" href="documentatia.css" />
+</head>
+
+<body>
+    <header>
+        <img src="download.png" width="227" height="50" alt="Scholarly HTML logo">
+        <h1>Fruits On The Web</h1>
+    </header>
+    <div role="contentinfo">
+        <ol role="directory">
+            <li><a href="#abstract"><span> </span>Abstract</a></li>
+            <li><a href="#introducere"><span> </span>Introducere</a></li>
+            <li><a href="#structure"><span> </span>Structura</a>
+                <ol role="directory">
+                    <li><a href="#HTML"><span>3.1 </span>HTML </a></li>
+                    <li><a href="#CSS"><span>3.2 </span>CSS</a></li>
+                    <li><a href="#Javascript"><span>3.3 </span>Javascript</a>
+                    </li>
+                    <li><a href="#NodeJS"><span>3.4 </span>NodeJS</a></li>
+                    <li><a href="#MongoDB"><span>3.5 </span>MongoDB</a></li>
+                    <li><a href="#Github"><span>3.6 </span>Github</a></li>
+                </ol>
+            </li>
+            <li><a href="#interfata"><span> </span>Interfata aplicatiei</a>
+                <ol role="directory">
+                    <li><a href="#register"><span>4.1 </span>Register</a></li>
+                    <li><a href="#login"><span>4.2 </span>Login</a></li>
+                    <li><a href="#homepage"><span>4.3 </span>HomePage</a></li>
+                    <li><a href="#about"><span>4.4 </span>About</a></li>
+                </ol>
+            </li>
+            <li><a href="#referinte"><span></span>Referinte</a></li>
+
+        </ol>
+        <div role="contentinfo">
+            <h2>Autori</h2>
+            <p>Tiganus Ricardo Ionel &amp; Grigore Valerian</p>
+        </div>
+
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2>Abstract</h2>
+            <p>
+                FrOW (Fruits On The Web) este un joc Web educativ cu scenariu, miza si conditii de victorie/infrangere
+                stabilite de echipa destinat elevilor din clasele primare.
+
+            </p>
+        </section>
+        <section id="introducere" role="doc-introduction">
+            <h2>Introducere</h2>
+            <p>
+                Scopul joculețului este unul educativ si ofera elevilor din clasele primare ocazia de a isi dezvolta
+                cunostintele in domeniul fructelor. Acestia se pot inregistra pe site
+                dupa care se pot loga cu contul creat si vor intra in joc. Ei pot alege de asemenea nivelul de
+                dificultate al jocului si in functie de raspunsurile
+                corecte vor primi un punctaj.
+            </p>
+        </section>
+        <section id="structure">
+            <!-- review? -->
+            <h2>Structura</h2>
+            <div>
+                Pentru a realiza interfata web si pentru a implementa functionalitatile aplicatiei folosim:<br />
+                <span id="HTML"> 3.1 </span> HTML
+                <p>
+                    HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce
+                    pot fi afisate intr-un browser (sau navigator). Scopul HTML este mai degraba prezentarea
+                    informatiilor – paragrafe, fonturi, tabele s.a.m.d. – decat descrierea
+                    semanticii documentului.
+                </p>
+                <span id="CSS">3.2</span> CSS
+                <p>
+                    CSS (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML.
+                    Stilurile se pot atasa elementelor HTML prin intermediul unor fisiere externe sau direct in cadrul
+                    documentului html.
+                </p>
+                <span id="Javascript">3.3</span> Javascript
+                <p>
+                    JavaScript (JS) este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor. Este
+                    folosit mai ales pentru introducerea unor functionalitati în paginile web, codul JavaScript din
+                    aceste pagini fiind rulat de catre browser.
+                    <br /> Proiectul contine modulul "scripts", in care utilizam Fetch API's.
+                </p>
+                <span id="NodeJS">3.4</span> NodeJS
+                <p>
+                    Node.js este un mediu de execuție JavaScript de fundal multiplatformă cu sursă deschisă, care
+                    rulează pe motorul V8 și execută cod JavaScript în afara unui navigator web.
+                    <br /> Proiectul este structurat in: "controllers", "models", "public", "routes". Pentru a putea fi
+                    rulat, trebuie instalate dependentele ("npm install") si pentru a porni server-ul, se foloseste
+                    comanda "npm run dev".
+                </p>
+                <span id="MongoDB">3.5</span> MongoDB
+                <p>
+                    MongoDB este o bază de date NoSQL open-source orientată pe documente. Acestă bază de date
+                    beneficiază de suport din partea companiei 10gen. MongoDB face parte din familia de sistemelor de
+                    baze de date NoSQL. Baza de date PerM contine colectiile "product",
+                    "favorites", "preferences", "reviews", "users", "cart", "statistics".
+                </p>
+                <span id="Github">3.6</span> Github
+                <p>
+                    GitHub este un serviciu de gazduire web pentru proiecte de dezvoltare a software-ului care
+                    utilizeaza sistemul de control al versiunilor Git.
+                </p>
+            </div>
+        </section>
+        <section id="interfata">
+            <h2>Interfata Aplicatiei</h2>
+            <span id="register">4.1</span> Register
+            <p>
+                Pe pagina de Register utilizatorul va trebui sa completeze mai multe campuri (first-name, last-name,
+                email, password, confirm-password), dupa care va
+                daca va apasa butonul "Create" va fi directionat catre paginna de Login. Daca acesta are deja un cont
+                poate omite toti acesti pasi de mai sus si apasand pe
+                referinta "Have an account" de dedesubtul butonului "Create" poate merge direct pe pagina de Login.
+            </p>
+            <span id="login">4.2</span> Login
+            <p>
+                Pe pagina de Login, utilizatorul se poate conecta completand cele doua campuri (Username, Password) dupa
+                care daca va apasa butonul "Login" si
+                daca datele corespund cu cele din baza de date va fi redirectionat catre HomePage-ul jocului. De
+                asemenea, daca utilizatorul nu are un cont
+                creat poate apasa pe textul "Don`t have an account?" care il va duce catre pagina de Register pentru
+                a-si crea un cont.
+            </p>
+            <span id="homepage">4.3</span> HomePage
+            <p>
+                Dupa ce utilizatorul se va conecta acesta va fi redirectionat la pagina de HomePage. Aici acesta va
+                putea alege nivelul de dificultate
+                al jocului (Easy, Medium, Hard) din meniul din partea dreapta. Pe ecran va fi afisata o imagine cu un
+                anumit fruct si in functie de nivelul de dificultate ales
+                utilizatorul va avea mai putine sau mai multe variante de raspuns, una dintre ele fiind cea corecta.
+                Daca va ghici toate raspunsurile corecte dintr-un Room,
+                acestuia is e va atribui un scor care se va adauga la scorul lui global in functie de dificultatea
+                modului de joc: pentru Easy:1000, pentru Medium:2000, iar pentru
+                Hard:5000.
+                La accesarea unui mod de joc in partea jos dreapta se vor afisa detalii despre:
+                tipul jocului, id-ul lobby-ului si numarul de playeri care au participat la acel joc pana atunci dar si
+                si informatii despre punctajul acumulat pe parcursul acestui mod, dar side numarul de runde pe care
+                acest mod le are
+                (Easy: 3 runde, Medium: 5 runde, Hard: 7 runde).
+                In partea stanga-sus a
+                paginii se va afisa efectiv numarul utilizatorilor
+                logati la momentul de fata in joc. Odata cu dobandirea punctelor utilizatorii pot vedea daca se afla in
+                TOP10 cele mai mari punctaje tot in partea
+                stanga la mijloc. Tot aici va fi si un buton de "Logout" prin care utilizatorul va putea iesi din cont
+                revenind la pagina de "Login".
+                La
+            </p>
+
+            <span id="about">4.4</span> About
+            <p>
+                Pagina de About va contine informatii despre joc si despre versiunea acestuia.
+                Aceasta pagina se regaseste in pagina Login printr-o referinta.
+            </p>
+            <span id="rules">4.4</span> Rules
+            <p>
+                Pagina de Rules se va regasi pe HomePage si prezinta toate detaliile referitoare
+                la modul de utilizare al jocului. (Distribuirea punctajelor, Distribuirea scorului
+                obtinut, etc.. )
+            </p>
+
+
+        </section>
+
+
+
+        <section id="referinte">
+            <h2>Referinte</h2>
+            <dl>
+                <dt id="ref-HTML">HTML</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://en.wikipedia.org/wiki/HTML">
+                    <cite property="schema:name">
+                        <a href="https://en.wikipedia.org/wiki/HTML">HTML
+                            Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-CSS">CSS</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://en.wikipedia.org/wiki/CSS">
+                    <cite property="schema:name">
+                        <a href="https://en.wikipedia.org/wiki/CSS">CSS
+                            Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-javascript">JAVASCRIPT</dt>
+                <dd property="schema:citation" typeof="schema:WebPage"
+                    resource="https://ro.wikipedia.org/wiki/JavaScript">
+                    <cite property="schema:name">
+                        <a href="https://ro.wikipedia.org/wiki/JavaScript">JavaScript</a>
+                    </cite>.
+                </dd>
+            </dl>
+
+        </section>
+</body>
+
+</html>
