@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits On The Web!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="../scripts.js"></script>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="backvideo">
+        <source src="../assets/images/background.mp4" type="video/mp4"> 
+    </video>
+    <div class="screen">
+        <div class="login">
+            <div class="logintext">
+                <h1>Login</h1>
+            </div>
+            <div class="forms">
+                <form>
+                    <div class="username">
+                        <label for="username"></label>
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div class="password">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="butttonlogin">
+                        <input id="button" value="Login" onclick="getAnotherPage('../HomePage/index.html');">
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div class="account">
+                <a href="../RegisterPage/index.html">Don`t have an account?</a>
+            </div> 
+            <div class="about">
+                <a href="../About/index.html">About!</a>
+            </div>
+            <div class="experience">
+                <h4>Try a new learning experience through play!</h4>
+            </div>
+        </div>
+    </div>
+    <embed src="../assets/images/audio.mp3" loop="true" autostart="true" width="0" height="0">
+</body>
+</html>
