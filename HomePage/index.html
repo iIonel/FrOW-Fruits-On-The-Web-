@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../scripts.js"></script>
+<link href="https://fonts.cdnfonts.com/css/comiccomoc" rel="stylesheet">
+<link rel="shortcut icon" href="#"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<title>Fruits On The Web!</title>
+</head>
+<body>
+<div class="main">
+    <video autoplay loop muted plays-inline class="backvideo">
+        <source src="../assets/images/background.mp4" type="video/mp4"> 
+    </video>
+    <div id="details">
+        <div class="tabbar">
+            <div class="onlineBox">
+                <img id="online" src="../assets/images/online.jpg">
+                <p id="players"> </p>
+            </div>
+            <img class="logout" src="../assets/images/logout.png" onclick="getAnotherPage('../LoginPage/index.html')">
+        </div>
+        <div id="leaderboard">
+            <h1 id="titleLeaderBoard">LeaderBoard</h1>
+            <li class="top10">
+                <ul class="playersId">
+                    <p class="info" id="player1"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player2"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player3"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player4"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player5"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player6"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player7"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player8"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player9"></p>
+                </ul>
+                <ul class="playersId">
+                    <p class="info" id="player10"></p>
+                </ul>
+
+            </li>
+        </div>
+        <div class="scoreBox" >
+            <img id="score" src="../assets/images/points.jpg">
+            <p id="points"></p>
+        </div>
+        <div class="reponse">
+            <p id="response">WELCOME, GUEST#5121!</p>
+        </div>
+    </div>
+    
+    <div class="game">
+        <div class="title">
+            <h1 class="titleGame">Fruits On The Web</h1>
+        </div>
+
+        <div id="gameSection">
+            <audio id="tab" src="../assets/images/tab.mp3"></audio>
+            <img id="photo">
+            <button class="answer" onclick="getAnswer(0)" id="btn0"></button>
+            <button class="answer" onclick="getAnswer(1)" id="btn1"></button>
+            <button class="answer" onclick="getAnswer(2)" id="btn2"></button>
+        </div>
+    </div>
+
+    <div class="gameSelection">
+        <div class="rules" onclick="getAnotherPage('../GameRules/index.html')">
+            <p id="gameRules">Rules</p>
+        </div>
+        <img class="modes" id="easy" src="../assets/images/easy.png" onclick="getEasyLevel()">
+        <img class="modes" id="medium" src="../assets/images/medium.png" onclick="getMediumLevel()">
+        <img class="modes" id="hard" src="../assets/images/hard.png" onclick="getHardLevel()">
+        <div id="gameDetailDown">
+                <div id="aboutYou">
+                <p id="currentScore">SCORE: </p>
+                <p id="round">ROUND: </p>
+            </div>
+            <p id="extraPoints"></p>
+            <div id="aboutRoom">
+                <p id="roomType">TYPE: </p>
+                <p id="roomId">ROOM: </p> 
+                <p id="playersPlays">PLAYERS: </p>
+            </div>
+        </div>
+    </div>
+</div>
+<embed src="../assets/images/audio.mp3" loop="true" autostart="true" width="0" height="0">
+</body>
+</html>
