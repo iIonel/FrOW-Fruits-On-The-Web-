@@ -13,3 +13,8 @@ Educational game for children to learn fruits and vegetables
 
 ![image](https://github.com/iIonel/FrOW-Fruits-On-The-Web-/assets/45739581/d40f2120-274d-4ea8-b6e6-1d07852a5d59)
 
+
+## Authors
+
+- [@iIonel](https://www.github.com/iIonel)
+- [@valigrigore](https://www.github.com/valigrigore27)
