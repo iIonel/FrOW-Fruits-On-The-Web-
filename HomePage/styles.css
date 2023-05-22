@@ -1,7 +1,7 @@
 body{
     font-family: sans-serif;
     overflow: hidden;
-    background-image: url('/FrOW-Fruits-On-The-Web-/assets/images/background.jpg');
+    background-image: url('../assets/images/background.jpg');
 }
 
 .main{

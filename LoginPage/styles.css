@@ -2,10 +2,13 @@
     font-family: system-ui;
     text-align: center;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-image: url('/FrOW-Fruits-On-The-Web-/assets/images/background.jpg');
+    background-image: url('../assets/images/background.jpg');
 }
 
 a {
