@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="../scripts.js"></script>
+<script src="scriptGame"></script>
 <link href="https://fonts.cdnfonts.com/css/comiccomoc" rel="stylesheet">
 <link rel="shortcut icon" href="#"/>
 <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -12,15 +12,8 @@
 </head>
 <body>
 <div class="main">
-    <video autoplay loop muted plays-inline class="backvideo">
-        <source src="../assets/images/background.mp4" type="video/mp4"> 
-    </video>
     <div id="details">
         <div class="tabbar">
-            <div class="onlineBox">
-                <img id="online" src="../assets/images/online.jpg">
-                <p id="players"> </p>
-            </div>
             <img class="logout" src="../assets/images/logout.png" onclick="getAnotherPage('../LoginPage/index.html')">
         </div>
         <div id="leaderboard">
@@ -69,12 +62,7 @@
     </div>
     
     <div class="game">
-        <div class="title">
-            <h1 class="titleGame">Fruits On The Web</h1>
-        </div>
-
         <div id="gameSection">
-            <audio id="tab" src="../assets/images/tab.mp3"></audio>
             <img id="photo">
             <button class="answer" onclick="getAnswer(0)" id="btn0"></button>
             <button class="answer" onclick="getAnswer(1)" id="btn1"></button>
@@ -103,6 +91,5 @@
         </div>
     </div>
 </div>
-<embed src="../assets/images/audio.mp3" loop="true" autostart="true" width="0" height="0">
 </body>
 </html>

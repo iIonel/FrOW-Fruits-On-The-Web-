@@ -1,41 +1,13 @@
 body{
     font-family: sans-serif;
     overflow: hidden;
-}
-
-.backvideo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit:fill;
-    z-index: -1;
-}
-
-#titlePage{
-    height: 5rem;
-    width: 60rem;
-    margin: 0;
-    font-size: 3rem;
-    padding-left: 13rem;
-    background-color: red;
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
-    
-    background-size: 100%;
-    background-repeat: repeat;
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    font-family: 'Comiccomoc', sans-serif;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;                                          
+    background-image: url('/FrOW-Fruits-On-The-Web-/assets/images/background.jpg');
 }
 
 .main{
+    flex: 1 1 20rem;
+    max-width: 100%; 
+    margin-right: 1rem; 
     display: flex;
 }
 
@@ -44,25 +16,13 @@ body{
 }
 
 #details{
+    flex: 1 1 60rem; 
+    max-width: 100%; 
     display: block;
     width: 20rem;
     margin: 0;
 }
 
-.onlineBox{
-    display: flex;
-    background-color: white;
-    width: 10rem;
-    border-radius: 20px;
-    height: 2rem;
-}
-
-#online{
-    padding-top: 0.5rem;
-    padding-left: 0.7rem;
-    width: 1rem;
-    height: 1rem;
-}
 
 #players{    
     padding-top: 0.45rem;
@@ -158,6 +118,7 @@ li::marker {
 }
 
 .game{
+    margin-top: 5rem;
     display: block;
 }
 
@@ -197,21 +158,8 @@ button:hover{
 }
 
 
-.titleGame{
-    margin-left: 20rem;
-    margin-top: 0;
-    font-family: 'Comiccomoc';
-    font-size: 4rem;
-    background: #CB60B3;
-    background: linear-gradient(to right, #CB60B3 6%, #C146A1 0%, #A80077 67%, #DB36A4 77%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
 #gameSection{
-    opacity: 0;
+    opacity: 1;
 }
 #gameDetailDown{
     margin-top: 1rem;
@@ -294,95 +242,4 @@ button:hover{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-}
-
-@media (max-width: 1200px) {
-  .titleGame {
-    font-size: 3rem;
-    margin-left: 15rem;
-  }
-
-  .game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main {
-    flex-direction: column;
-  }
-
-  .answer {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-
-  #photo {
-    margin-left: 0;
-    margin-right: 0;
-    width: 80%;
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 768px) {
-  .titleGame {
-    font-size: 2rem;
-    margin-left: 8rem;
-  }
-
-  #leaderboard {
-    width: 80%;
-    max-width: 400px;
-  }
-
-  .playersId {
-    font-size: 1.1rem;
-  }
-
-  .modes {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  #easy {
-    margin-top: 2rem;
-  }
-
-  .answer {
-    width: 6rem;
-    height: 3rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .titleGame {
-    font-size: 1.5rem;
-    margin-left: 3rem;
-  }
-
-  #titleLeaderBoard {
-    font-size: 1.5rem;
-    padding-left: 1rem;
-  }
-
-  .playersId {
-    font-size: 1rem;
-  }
-
-  .modes {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  #easy {
-    margin-top: 1rem;
-  }
-
-  .answer {
-    width: 4rem;
-    height: 2rem;
-    font-size: 0.6rem;
-  }
 }
