@@ -2,4 +2,4 @@
 
 
 ## Fruits On The Web
-educational game for children to learn fruits and vegetables
+Educational game for children to learn fruits and vegetables
