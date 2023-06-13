@@ -1,3 +1,7 @@
+/*
+    FILE FOR TESTING FOR FRONT-SIDE
+*/
+
 var guests =[];
 var scores =[];
 var yourScore = 0;
@@ -11,15 +15,15 @@ var fakers =[];
 const pictures =
 [
     ["","empty"]
-    ["../assets/images/banana.jpeg","Banana"],
-    ["../assets/images/watermelon.jpeg","Watermelon"],
-    ["../assets/images/plum.jpeg","Plum"],
-    ["../assets/images/mango.jpeg","Mango"],
-    ["../assets/images/kiwi.jpeg","Kiwi"],
-    ["../assets/images/apple.jpeg","Apple"],
-    ["../assets/images/grape.jpeg","Grape"],
-    ["../assets/images/coconut.jpeg","Coconut"],
-    ["../assets/images/Lemon.jpeg","Lemon"],
+    ["images/banana.jpeg","Banana"],
+    ["images/watermelon.jpeg","Watermelon"],
+    ["images/plum.jpeg","Plum"],
+    ["images/mango.jpeg","Mango"],
+    ["images/kiwi.jpeg","Kiwi"],
+    ["images/apple.jpeg","Apple"],
+    ["images/grape.jpeg","Grape"],
+    ["images/coconut.jpeg","Coconut"],
+    ["images/Lemon.jpeg","Lemon"],
 ];
 
 
@@ -188,7 +192,6 @@ function generateRound(){
     generateButtonsRound();
     generateAnswers();
     generateButtons();
-// alert(fruit + ' ' + btnGood + ' ' + fruitName + '-GOOD '+ btnAux1 + ' '+ fakefruit1 + '-BAD ' + btnAux2 + ' '+ fakefruit2 + '-BAD ');
 }
 
 function getAnswer(no){
@@ -196,10 +199,6 @@ function getAnswer(no){
     if(btnGood == no)
         yourScore++;
     generateNextRound();
-}
-
-function getAnotherPage(url){
-    window.open(url, "_self");
 }
 
 function points(){
