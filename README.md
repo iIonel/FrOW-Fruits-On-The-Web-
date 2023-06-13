@@ -18,5 +18,5 @@ Educational game for children to learn fruits and vegetables
 
 **Client:** HTML, CSS, Javascript Vanilla
 
-**Server:** PHP
+**Server:** PHP, MySql
 
