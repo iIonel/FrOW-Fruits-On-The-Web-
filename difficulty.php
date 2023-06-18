@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruits On The Web!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="scripts/route.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h2>About</h2>
-        <p>Fruits On The Web belongs to Arcade and it is often associated with Clicker Games and Tap Games.This game
-            has been published on 2023-04-08 and updated on 2023-04-09. (version 1.0.0.2 Beta) </p>
-        <a href="login.php">Back to Login?</a>
+        <h1>Select Game Level!</h1>
+        <button onclick="anotherPage('round.html')">Easy</button>
+        <button>Medium</button>
+        <button>Hard</button>
+        <a href="home.php">Back to Home?</a>
         <h4>Try a new learning experience through play!</h4>
     </div>
 </body>

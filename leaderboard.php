@@ -10,13 +10,19 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>About</h2>
-        <p>Fruits On The Web belongs to Arcade and it is often associated with Clicker Games and Tap Games.This game
-            has been published on 2023-04-08 and updated on 2023-04-09. (version 1.0.0.2 Beta) </p>
-        <a href="login.php">Back to Login?</a>
+    <form class="container">
+        <h2>LeaderBoard</h2>
+        <ul class="board">
+            <?php
+              require './includes/rss-informations.php';
+              $rss = './includes/leaderboard.xml'; 
+              $parsedFeed = parseRssFeed($rss);
+              echo $parsedFeed;
+            ?>
+        </ul>
+        <a href="home.php">Back to Home?</a>
         <h4>Try a new learning experience through play!</h4>
-    </div>
+    </form>
 </body>
 
 </html>
