@@ -5,81 +5,18 @@ Educational game for children to learn fruits and vegetables
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Sources
+## Screenshots
 
+![image](https://github.com/iIonel/FrOW-Fruits-On-The-Web-/assets/45739581/94a6fa43-681c-4077-a3a8-60763e923f9c)
 
-## SQL Tables
+![image](https://github.com/iIonel/FrOW-Fruits-On-The-Web-/assets/45739581/60d03758-e899-44ec-b372-221695b18eef)
 
-Database name: frow
-
-Users table 
-
-```bash
-  CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(32),
-    last_name VARCHAR(32),
-    username VARCHAR(32),
-    email VARCHAR(32),
-    password VARCHAR(255),
-    score INT
-);
-```
-
-Games table 
-
-```bash
-  CREATE TABLE games (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    timer INT,
-    level VARCHAR(20),
-    rounds INT,
-    users INT,
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-```
-
-Rounds table 
-
-```bash
-  CREATE TABLE rounds (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    game_id INT,
-    round_number INT,
-    answer VARCHAR(32),
-    image_path VARCHAR(255),
-    FOREIGN KEY (game_id) REFERENCES games(id)
-);
-```
-
-Answers table 
-
-```bash
-  CREATE TABLE answers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    round_id INT,
-    answer VARCHAR(255),
-    FOREIGN KEY (round_id) REFERENCES rounds(id)
-);
-```
-Rooms table 
-
-```bash
-  CREATE TABLE rooms (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
-    game_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (game_id) REFERENCES games(id)
-);
-```
-
+![image](https://github.com/iIonel/FrOW-Fruits-On-The-Web-/assets/45739581/d40f2120-274d-4ea8-b6e6-1d07852a5d59)
 
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Javascript
+**Client:** HTML, CSS, Javascript Vanilla
 
-**Server:** PHP, MySQL
+**Server:** PHP, MySql
 
