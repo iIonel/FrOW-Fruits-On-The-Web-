@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+            user-scalable=yes" />
+    <title>FruitsOnTheWeb</title>
+    <link rel="stylesheet" href="documentatia.css" />
+</head>
+
+<body>
+    <header>
+        <img src="download.png" width="227" height="50" alt="Scholarly HTML logo">
+        <h1>Fruits On The Web</h1>
+    </header>
+    <div role="contentinfo">
+        <ol role="directory">
+            <li><a href="#abstract"><span> </span>Abstract</a></li>
+            <li><a href="#introducere"><span> </span>Introducere</a></li>
+            <li><a href="#structure"><span> </span>Structura</a>
+                <ol role="directory">
+                    <li><a href="#HTML"><span>3.1 </span>HTML </a></li>
+                    <li><a href="#CSS"><span>3.2 </span>CSS</a></li>
+                    <li><a href="#Javascript"><span>3.3 </span>Javascript</a>
+                    </li>
+                    <li><a href="#PHP"><span>3.4 </span>PHP</a></li>
+                    <li><a href="#MySQL"><span>3.5 </span>MySQL</a></li>
+                    <li><a href="#Github"><span>3.6 </span>Github</a></li>
+                </ol>
+            </li>
+            <li><a href="#interfata"><span> </span>Interfata aplicatiei</a>
+                <ol role="directory">
+                    <li><a href="#register"><span>4.1 </span>Register</a></li>
+                    <li><a href="#login"><span>4.2 </span>Login</a></li>
+                    <li><a href="#homepage"><span>4.3 </span>HomePage</a></li>
+                    <li><a href="#about"><span>4.4 </span>About</a></li>
+                </ol>
+            </li>
+            <li><a href="#referinte"><span></span>Referinte</a></li>
+
+        </ol>
+        <div role="contentinfo">
+            <h2>Autori</h2>
+            <p>Tiganus Ricardo Ionel &amp; Grigore Valerian</p>
+        </div>
+
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2>Abstract</h2>
+            <p>
+                FrOW (Fruits On The Web) este un joc Web educativ cu scenariu, miza si conditii de victorie/infrangere
+                stabilite de echipa destinat elevilor din clasele primare.
+
+            </p>
+        </section>
+        <section id="introducere" role="doc-introduction">
+            <h2>Introducere</h2>
+            <p>
+                Scopul joculețului este unul educativ si ofera elevilor din clasele primare ocazia de a isi dezvolta
+                cunostintele in domeniul fructelor. Acestia se pot inregistra pe site
+                dupa care se pot loga cu contul creat si vor intra in joc. Ei pot alege de asemenea nivelul de
+                dificultate al jocului si in functie de raspunsurile
+                corecte vor primi un punctaj.
+            </p>
+        </section>
+        <section id="structure">
+            <!-- review? -->
+            <h2>Structura</h2>
+            <div>
+                Pentru a realiza interfata web si pentru a implementa functionalitatile aplicatiei folosim:<br />
+                <span id="HTML"> 3.1 </span> HTML
+                <p>
+                    HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce
+                    pot fi afisate intr-un browser (sau navigator). Scopul HTML este mai degraba prezentarea
+                    informatiilor – paragrafe, fonturi, tabele s.a.m.d. – decat descrierea
+                    semanticii documentului.
+                </p>
+                <span id="CSS">3.2</span> CSS
+                <p>
+                    CSS (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML.
+                    Stilurile se pot atasa elementelor HTML prin intermediul unor fisiere externe sau direct in cadrul
+                    documentului html.
+                </p>
+                <span id="Javascript">3.3</span> Javascript
+                <p>
+                    JavaScript (JS) este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor. Este
+                    folosit mai ales pentru introducerea unor functionalitati în paginile web, codul JavaScript din
+                    aceste pagini fiind rulat de catre browser.
+                    <br /> Proiectul contine modulul "scripts", in care utilizam Fetch API's.
+                </p>
+                <span id="PHP">3.4</span> PHP
+                <p>
+                    PHP este un limbaj de programare. Numele PHP provine din limba engleză și este un acronim recursiv:
+                    Php: Hypertext Preprocessor. Folosit inițial pentru a produce pagini web dinamice, este folosit pe
+                    scară
+                    largă în dezvoltarea paginilor și aplicațiilor web.
+                </p>
+                <span id="MySQL">3.5</span> MySQL
+                <p>
+                    MySQL este un sistem de gestiune a bazelor de date relaționale, produs de compania suedeza MySQL AB
+                    și
+                    distribuit sub Licența Publică Generală GNU.
+                    Este cel mai popular SGBD open-source la ora actuală.
+                    Deși este folosit foarte des împreună cu limbajul de programare PHP, cu MySQL
+                    se pot construi aplicații în orice limbaj major.
+                </p>
+                <span id="Github">3.6</span> Github
+                <p>
+                    GitHub este un serviciu de gazduire web pentru proiecte de dezvoltare a software-ului care
+                    utilizeaza sistemul de control al versiunilor Git.
+                </p>
+            </div>
+        </section>
+        <section id="interfata">
+            <h2>Interfata Aplicatiei</h2>
+            <span id="register">4.1</span> Register
+            <p>
+                Pe pagina de Register utilizatorul va trebui sa completeze mai multe campuri (first-name, last-name,
+                email, password, confirm-password), dupa care va
+                daca va apasa butonul "Create" va fi directionat catre paginna de Login. Daca acesta are deja un cont
+                poate omite toti acesti pasi de mai sus si apasand pe
+                referinta "Have an account" de dedesubtul butonului "Create" poate merge direct pe pagina de Login.
+            </p>
+            <span id="login">4.2</span> Login
+            <p>
+                Pe pagina de Login, utilizatorul se poate conecta completand cele doua campuri (Username, Password) dupa
+                care daca va apasa butonul "Login" si
+                daca datele corespund cu cele din baza de date va fi redirectionat catre HomePage-ul jocului. De
+                asemenea, daca utilizatorul nu are un cont
+                creat poate apasa pe textul "Don`t have an account?" care il va duce catre pagina de Register pentru
+                a-si crea un cont.
+            </p>
+            <span id="homepage">4.3</span> HomePage
+            <p>
+                Dupa ce utilizatorul se va conecta acesta va fi redirectionat la pagina de HomePage
+                unde va fi intampinat cu un mesaj "Welcome, nume-utilizator".
+                Tot aici se vor gasi 5 butoane (Rules, Play, LeaderBoard, Create Game, Logout),
+                scorul utilizatorului si un mic mesaj in final.
+                <br>
+                Butonul "Rules" ne va directiona catre pagina de reguli ale jocului, cuprinzand toate detaliile
+                referitoare
+                la modul de utilizare. (Distribuirea punctajelor, Distribuirea scorului
+                obtinut, etc.. )
+                <br>
+                Prin apasarea butonului "Play" vom ajunge la o noua pagina de unde vom putea selecta nivelul de joc
+                (Easy, Medium, Hard), iar apoi vom putea incepe jocul la dificultatea dorita.
+
+                <br>
+                Odata apasat butonul "LeaderBoard" din aceasta pagina, acesta ne va directiona catre un clasament cu
+                numele tuturor
+                jucatorilor logati
+                pana in prezent in baza de date, urmat de scorul obtinut de acestia pe parcursul jocurilor.
+                <br>
+                Butonul "Create Game" ofera utilizatorului logat posibilitatea de a-si initia propriul joc cu
+                dificultatea
+                si timer-ul dorit. In continuare, in functie de dificultatea aleasa jocul va contine un anumit numar de
+                runde,
+                asadar in aceasta sectiune utilizatorul va putea selecta ce fruct isi doreste sa apara la fiecare runda.
+                <br>
+                Cu ajutorul butonului de "Logout", utilizatorul va putea iesi din cont, insa odata deconectat acesta nu
+                va putea
+                accesa HomePage-ul pana nu se conecteaza din nou.
+
+
+                <br>
+                De asemenea, fiecare pagina la care ajungem accesand aceste butoane are in subsol o referinta "Back to
+                Home"
+                ce ne va directiona inapoi la pagina de HomePage.
+            </p>
+
+
+
+            </p>
+
+            <span id="about">4.4</span> About
+            <p>
+                Pagina de About va contine informatii despre joc si despre versiunea acestuia.
+                Aceasta pagina se regaseste in pagina Login printr-o referinta.
+            </p>
+
+
+        </section>
+
+
+
+        <section id="referinte">
+            <h2>Referinte</h2>
+            <dl>
+                <dt id="ref-HTML">HTML</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://en.wikipedia.org/wiki/HTML">
+                    <cite property="schema:name">
+                        <a href="https://en.wikipedia.org/wiki/HTML">HTML
+                            Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-CSS">CSS</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://en.wikipedia.org/wiki/CSS">
+                    <cite property="schema:name">
+                        <a href="https://en.wikipedia.org/wiki/CSS">CSS
+                            Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-javascript">JAVASCRIPT</dt>
+                <dd property="schema:citation" typeof="schema:WebPage"
+                    resource="https://ro.wikipedia.org/wiki/JavaScript">
+                    <cite property="schema:name">
+                        <a href="https://ro.wikipedia.org/wiki/JavaScript">JavaScript Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-php">PHP</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://www.php.net/">
+                    <cite property="schema:name">
+                        <a href="https://www.php.net/">PHP Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+            <dl>
+                <dt id="ref-mysql">MySQL</dt>
+                <dd property="schema:citation" typeof="schema:WebPage" resource="https://www.mysql.com/">
+                    <cite property="schema:name">
+                        <a href="https://www.mysql.com/">MySQL Specifications</a>
+                    </cite>.
+                </dd>
+            </dl>
+        </section>
+</body>
+
+</html>
