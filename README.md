@@ -66,7 +66,7 @@ Answers table
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Javascript Vanilla
+**Client:** HTML, CSS, Javascript
 
 **Server:** PHP, MySQL
 
