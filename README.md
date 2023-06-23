@@ -10,6 +10,8 @@ Educational game for children to learn fruits and vegetables
 
 ## SQL Tables
 
+Database name: frow
+
 Users table 
 
 ```bash
