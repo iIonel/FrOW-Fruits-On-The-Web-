@@ -1,5 +1,5 @@
 ## Fruits On The Web
-Educational game for children to learn fruits and vegetables
+Educational game for children to learn fruits
 
 ## License
 
