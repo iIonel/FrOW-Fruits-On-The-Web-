@@ -61,6 +61,17 @@ Answers table
     FOREIGN KEY (round_id) REFERENCES rounds(id)
 );
 ```
+Rooms table 
+
+```bash
+  CREATE TABLE rooms (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    game_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (game_id) REFERENCES games(id)
+);
+```
 
 
 
