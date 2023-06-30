@@ -8,6 +8,18 @@ Educational game for children to learn fruits
 ## Video
 https://youtu.be/Z5pD4Kqxfg8
 
+## Run Vendor
+
+Install Composer from https://getcomposer.org/. Run:
+```bash
+  composer require firebase/php-jwt
+```
+And now you can use
+```bash
+  require_once 'vendor/autoload.php';
+```
+
+
 ## SQL Tables
 
 Database name: frow
