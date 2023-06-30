@@ -11,7 +11,6 @@
 
 <body>
     <header>
-        <img src="download.png" width="227" height="50" alt="Scholarly HTML logo">
         <h1>Fruits On The Web</h1>
     </header>
     <div role="contentinfo">
@@ -29,12 +28,25 @@
                     <li><a href="#Github"><span>3.6 </span>Github</a></li>
                 </ol>
             </li>
+            <li><a href="#context"><span> </span>Context</a>
+                <ol role="directory">
+                    <li><a href="#rest"><span>4.1 </span>RestApi vs GraphQL</a></li>
+                    <li><a href="#rss"><span>4.2 </span>LeaderBoard in RSS</a></li>  
+                    <li><a href="#jwt"><span>4.3 </span>Folosirea JWT</a></li>  
+                </ol>
+            </li>
+            <li><a href="#implementare"><span> </span>Implementarea aplicatiei</a>
+                <ol role="directory">
+                    <li><a href="#mvc"><span>5.1 </span>Model View Controller</a></li>
+                    <li><a href="#restapi"><span>5.2 </span>Rest API</a></li>
+                </ol>
+            </li>
             <li><a href="#interfata"><span> </span>Interfata aplicatiei</a>
                 <ol role="directory">
-                    <li><a href="#register"><span>4.1 </span>Register</a></li>
-                    <li><a href="#login"><span>4.2 </span>Login</a></li>
-                    <li><a href="#homepage"><span>4.3 </span>HomePage</a></li>
-                    <li><a href="#about"><span>4.4 </span>About</a></li>
+                    <li><a href="#register"><span>6.1 </span>Register</a></li>
+                    <li><a href="#login"><span>6.2 </span>Login</a></li>
+                    <li><a href="#homepage"><span>6.3 </span>HomePage</a></li>
+                    <li><a href="#about"><span>6.4 </span>About</a></li>
                 </ol>
             </li>
             <li><a href="#referinte"><span></span>Referinte</a></li>
@@ -68,34 +80,34 @@
             <h2>Structura</h2>
             <div>
                 Pentru a realiza interfata web si pentru a implementa functionalitatile aplicatiei folosim:<br />
-                <span id="HTML"> 3.1 </span> HTML
+                <span id="HTML"></span> <h3>3.1 HTML</h3> 
                 <p>
                     HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce
                     pot fi afisate intr-un browser (sau navigator). Scopul HTML este mai degraba prezentarea
                     informatiilor – paragrafe, fonturi, tabele s.a.m.d. – decat descrierea
                     semanticii documentului.
                 </p>
-                <span id="CSS">3.2</span> CSS
+                <span id="CSS"></span> <h3>3.2 CSS</h3> 
                 <p>
                     CSS (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML.
                     Stilurile se pot atasa elementelor HTML prin intermediul unor fisiere externe sau direct in cadrul
                     documentului html.
                 </p>
-                <span id="Javascript">3.3</span> Javascript
+                <span id="Javascript"></span> <h3>3.3 JavaScript</h3> 
                 <p>
                     JavaScript (JS) este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor. Este
                     folosit mai ales pentru introducerea unor functionalitati în paginile web, codul JavaScript din
                     aceste pagini fiind rulat de catre browser.
                     <br /> Proiectul contine modulul "scripts", in care utilizam Fetch API's.
                 </p>
-                <span id="PHP">3.4</span> PHP
+                <span id="PHP"></span> <h3>3.4 PHP</h3> 
                 <p>
                     PHP este un limbaj de programare. Numele PHP provine din limba engleză și este un acronim recursiv:
                     Php: Hypertext Preprocessor. Folosit inițial pentru a produce pagini web dinamice, este folosit pe
                     scară
                     largă în dezvoltarea paginilor și aplicațiilor web.
                 </p>
-                <span id="MySQL">3.5</span> MySQL
+                <span id="MySQL"></span> <h3>3.5 MySQL</h3> 
                 <p>
                     MySQL este un sistem de gestiune a bazelor de date relaționale, produs de compania suedeza MySQL AB
                     și
@@ -104,80 +116,157 @@
                     Deși este folosit foarte des împreună cu limbajul de programare PHP, cu MySQL
                     se pot construi aplicații în orice limbaj major.
                 </p>
-                <span id="Github">3.6</span> Github
+                <span id="Github"></span> <h3>3.6 Github</h3> 
                 <p>
                     GitHub este un serviciu de gazduire web pentru proiecte de dezvoltare a software-ului care
                     utilizeaza sistemul de control al versiunilor Git.
                 </p>
             </div>
         </section>
+
+        <section id="context">
+            <!-- review? -->
+            <h2>Context</h2>
+            <div>
+                In aceasta rubrica vom preciza "de ce" am folosit anumite tehnologii pentru functionalitatile aplicatiei.<br />
+                <span id="rest"></span> <h3>4.1 RestApi vs GraphQL</h3> 
+                <p>
+                    Există câteva avantaje ale REST API (Application Programming Interface) față de GraphQL:
+                    <br><ul>
+                        <li>Simplitate și familiaritate: REST API utilizează abordarea tradițională bazată pe resurse și metode HTTP (GET, POST, PUT, DELETE) pentru a comunica între client și server. Această abordare este bine cunoscută și familiară dezvoltatorilor, deoarece se bazează pe concepte și standarde existente.</li>
+                        <li>Caching: REST API beneficiază de mecanismele de caching ale HTTP, cum ar fi cache-urile de pe servere intermediare (proxy servere, CDN-uri), care pot stoca răspunsurile API-ului pentru a fi reutilizate ulterior. Acest lucru poate îmbunătăți performanța și eficiența cererilor repetate către API.</li>
+                        <li>Flexibilitate în selectarea datelor: Cu REST API, clientul poate selecta exact câmpurile de care are nevoie din răspunsul API-ului, reducând astfel traficul de rețea și mărimea răspunsului. Aceasta se realizează prin specificarea parametrilor de interogare sau a altor opțiuni în URL.</li>
+                    </ul>
+                    Este important să menționăm că aceste avantaje sunt specifice REST API și că GraphQL vine cu propriile sale avantaje, cum ar fi interogări flexibile, evitarea sub-/over-fetching-ului de date și capacitatea de a recupera multiple resurse într-o singură cerere. Alegerea între REST API și GraphQL depinde de cerințele și nevoile specifice ale proiectului și echipa de dezvoltare.
+                </p>
+                <span id="rss"></span> <h3>4.2 LeaderBoard in RSS</h3> 
+                <p>
+                    Avantajele de a pune un clasament anume într-un flux RSS (Really Simple Syndication) includ:
+                    <br><ul>
+                       <li>Acces rapid la conținut relevant: Un clasament în fluxul RSS permite utilizatorilor să acceseze rapid conținutul cel mai relevant sau important. Articolele sau resursele cu un clasament mai înalt sunt aduse în prim-plan, ceea ce facilitează găsirea și consumul informațiilor pe care utilizatorii le consideră importante.</li>
+                       <li>Eficiență în consumul conținutului: Prin intermediul clasamentului, utilizatorii pot economisi timp și efort în căutarea și sortarea conținutului din fluxul RSS. Clasamentul le oferă o ordine predefinită sau personalizată a articolelor, astfel încât să poată accesa mai întâi cele mai relevante sau interesante informații, reducând necesitatea de a parcurge întregul flux pentru a găsi ceea ce îi interesează.</li>
+                    </ul>
+                </p>
+                <span id="jwt"></span> <h3>4.3 Folosirea JWT</h3> 
+                <p>
+                    JSON Web Token (JWT) are mai multe avantaje în ceea ce privește autentificarea și autorizarea în aplicațiile web și API-uri. Iată câteva avantaje ale utilizării JWT:
+                    <br><ul>
+                       <li>Autentificare stateless: JWT este un token stateless, ceea ce înseamnă că toate informațiile necesare pentru a autentifica și autoriza un utilizator sunt conținute în tokenul JWT însuși. Acest lucru elimină nevoia de a păstra o stare de sesiune la nivel de server și reduce dependența de stocarea sesiunilor sau a informațiilor de autentificare la nivel de server. Fiecare cerere este auto-suficientă, ceea ce facilitează scalarea și distribuirea aplicațiilor.</li>
+                       <li>Securitate: JWT utilizează algoritme de semnare digitală (cum ar fi HMAC sau RSA) pentru a verifica integritatea și autenticitatea tokenului. Aceasta înseamnă că poți fi sigur că informațiile din token nu au fost modificate sau falsificate în timpul transmiterii. Prin utilizarea unei chei secrete, doar serverul poate semna și verifica tokenurile, asigurând astfel securitatea datelor.</li>
+                       <li>Portabilitate și interoperabilitate: JWT este un format standardizat și interoperabil, ceea ce înseamnă că poate fi utilizat într-o varietate de limbaje de programare și platforme. Tokenurile JWT pot fi emise de un serviciu și utilizate de către altul, fără a fi nevoie de o comunicare complexă între acestea. Această portabilitate facilitează construirea de sisteme complexe și distribuite.</li>
+                     </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="implementare">
+            <h2>Implementarea Aplicatie</h2>
+            <span id="mvc"></span> <h3>5.1 Model View Controller</h3>
+            <p>
+                Model-View-Controller (MVC) este un design pattern arhitectural utilizat în dezvoltarea software pentru a separa componentele principale ale unei aplicații: modelul, vizualizarea și controlerul. Acest pattern promovează separarea responsabilităților și permite o structură mai clară și mai modulară a codului. In aplicatia noastra componentelor MVC sunt următoarele:
+                <ul>
+                    <li>Model: user, game, database, rounds, answers, rooms</li>
+                    <li>View: tot ce tine de html/php unde se va reprezenta client-side-ul</li>
+                    <li>Controller: authControllers, LeaderBoardController, etc.</li>
+                </ul>
+                Un exemplu precis de utilizarea a MVC-ului este urmatoarea prin controller-ul LoginController: 
+                <img src="./images/mvc.JPG">
+            </p>
+            <span id="restapi"></span> <h3>5.2 Rest API</h3>
+            <p>
+                REST API (Representational State Transfer Application Programming Interface) reprezintă un stil arhitectural utilizat în dezvoltarea aplicațiilor web pentru comunicarea între client și server. REST se bazează pe câteva principii de bază, care facilitează interoperabilitatea, scalabilitatea și eficiența sistemelor distribuite.
+                <br>
+                Un astfel de exemplu sugestiv din proiectul nostru este urmatoarea sectiune de cod:
+                <img src="./images/api.JPG">
+            </p> 
+        </section>
+
+
         <section id="interfata">
             <h2>Interfata Aplicatiei</h2>
-            <span id="register">4.1</span> Register
+            <span id="register"></span> <h3>6.1 Register</h3>
             <p>
                 Pe pagina de Register utilizatorul va trebui sa completeze mai multe campuri (first-name, last-name,
                 email, password, confirm-password), dupa care va
-                daca va apasa butonul "Create" va fi directionat catre paginna de Login. Daca acesta are deja un cont
+                daca va apasa butonul "Register" va fi directionat catre paginna de Login. Daca acesta are deja un cont
                 poate omite toti acesti pasi de mai sus si apasand pe
-                referinta "Have an account" de dedesubtul butonului "Create" poate merge direct pe pagina de Login.
+                referinta "Have an account" de dedesubtul butonului "Register" poate merge direct pe pagina de Login. In cazul in care contul pe care vrea sa il creeze utilizatorul aplicatiei,este gresit, va fi avertizat prin intermediul unui mesaj dedesubt plasat de Have an Account? (de ex: Empty Fields!) 
+                <img src="./images/register.JPG">
             </p>
-            <span id="login">4.2</span> Login
+            <span id="login"></span> <h3>6.2 Login</h3>
             <p>
                 Pe pagina de Login, utilizatorul se poate conecta completand cele doua campuri (Username, Password) dupa
                 care daca va apasa butonul "Login" si
                 daca datele corespund cu cele din baza de date va fi redirectionat catre HomePage-ul jocului. De
                 asemenea, daca utilizatorul nu are un cont
                 creat poate apasa pe textul "Don`t have an account?" care il va duce catre pagina de Register pentru
-                a-si crea un cont.
+                a-si crea un cont. In cazul in care este deja logat utilizatorul acesta va fi plasat direct pe pagina "Home".
+                <img src="./images/login.JPG">
             </p>
-            <span id="homepage">4.3</span> HomePage
+            <span id="homepage"></span> <h3>6.3 HomePage</h3>
             <p>
                 Dupa ce utilizatorul se va conecta acesta va fi redirectionat la pagina de HomePage
                 unde va fi intampinat cu un mesaj "Welcome, nume-utilizator".
                 Tot aici se vor gasi 5 butoane (Rules, Play, LeaderBoard, Create Game, Logout),
                 scorul utilizatorului si un mic mesaj in final.
-                <br>
-                Butonul "Rules" ne va directiona catre pagina de reguli ale jocului, cuprinzand toate detaliile
-                referitoare
-                la modul de utilizare. (Distribuirea punctajelor, Distribuirea scorului
-                obtinut, etc.. )
-                <br>
-                Prin apasarea butonului "Play" vom ajunge la o noua pagina de unde vom putea selecta nivelul de joc
-                (Easy, Medium, Hard), iar apoi vom putea incepe jocul la dificultatea dorita.
-
-                <br>
-                Odata apasat butonul "LeaderBoard" din aceasta pagina, acesta ne va directiona catre un clasament cu
-                numele tuturor
-                jucatorilor logati
-                pana in prezent in baza de date, urmat de scorul obtinut de acestia pe parcursul jocurilor.
-                <br>
-                Butonul "Create Game" ofera utilizatorului logat posibilitatea de a-si initia propriul joc cu
-                dificultatea
-                si timer-ul dorit. In continuare, in functie de dificultatea aleasa jocul va contine un anumit numar de
-                runde,
-                asadar in aceasta sectiune utilizatorul va putea selecta ce fruct isi doreste sa apara la fiecare runda.
-                <br>
-                Cu ajutorul butonului de "Logout", utilizatorul va putea iesi din cont, insa odata deconectat acesta nu
-                va putea
-                accesa HomePage-ul pana nu se conecteaza din nou.
-
-
-                <br>
-                De asemenea, fiecare pagina la care ajungem accesand aceste butoane are in subsol o referinta "Back to
-                Home"
-                ce ne va directiona inapoi la pagina de HomePage.
+                <img src="./images/home.JPG">
+                <br><ul>
+                    <li>Rules: Aceasta pagina va arata regulile jocului, precum si punctele acordate pentru acesta.</li>
+                    Jocul in sine are 3 dificultati: Easy, Medium, Hard iar distribuirea punctelor este data in felul urmator:
+                        <ul>
+                            <li>Easy: 1000 puncte</li>
+                            <li>Medium: 2000 puncte</li>
+                            <li>Hard: 3000 puncte</li>
+                        </ul>
+                    <br>
+                    <li>Play: La inceput va avea loc alegerea dificultatii jocului la care vreti sa anticipati (sunt cele 3 categorii de dificultati din Rules)</li>
+                    Dupa alegerea unei dificultati ni se va arata un Game Lobby in care putem selecta orice joc vrem (jocurile care sunt in lobby au un ID unic si Timer-ul corespunzator acesteia).
+                    <img src="./images/lobby.jpeg">
+                    <br> Exista doua tipuri de "stari ale jocului". In imaginea de mai sus putem observa ca culoarea scrisului corespunzator liniei in care se afla jocul respectiv poate fi doar <b>alb</b> sau <b>portocaliu</b>:
+                    <br> Starea jocului in care este culoarea alb indica faptul ca jucatorul nu a mai accesat acest ID, astfel acesta poate lua din urma sa punctele aferente insa daca starea jocului este portocalie acesta inseamna ca a accesat acest ID si poate juca acest joc insa nu poate acumula iarasi punctele aferente intrucat aplicatia are functionalitatea de anti-farming points. 
+                    <br> In ce consta Anti-Farming? Pai aplicatia dispune de o tabela din baza de date in care se poate lega ID-ul utilizatorului si ID-ul jocului aferent jucat la primul acces la acesta (tabela de tip rooms).
+                    <img src="./images/game.jpeg">
+                    <br>
+                    Dupa ce selecteaza un joc anume acesta va intra in jocul respectiv. In joc vor fi plasate atat rundele, variantele de raspuns de la crearea jocului acestuia cat si timer-ul ales de creatorul jocului in sine.
+                    Daca timpul va expira sau daca jucatorul va raspunde gresit la cel putin o runda acesta va primi 0 puncte. Jocul corespunde zicalei "totul sau nimic!".Jocul in sine este scris in scriptul de Javascript de unde preia de la backend din API jsonul si il foloseste sa faca dinamica pagina de joc, preia informatii importante despre timpul de joc, dificultatea cat si raspunsurile generate de backend.
+                    <img>
+                    <br>
+                    La finalul jocului se vor arata informatii relevante despre jocul jucat recent: ID-ul acestuia, cati utilizatori au mai jucat acest joc si categoria de dificultate a acestuia.
+                    <img src="./images/end.jpeg">
+                    <br>
+                    <li>LeaderBoard: La accesul acestui buton se va genera un LeaderBoard in care se vor pune toti useri in ordinea descrescatoare a scorului acestora. LeaderBoard este un fisier plasat in acelasi folder in care sunt plasate si fisierele de View cu extensia .xml iar pentru a pune in frontend vom apela la o functie de parsare a acestia utilizand principiile DOM</li>
+                    Un exemplu de xml generat pentru LeaderBoard este urmatorul: 
+                    <img src="./images/xml.jpeg">
+                    <br>
+                    <li>Create Game: functionalitatea aceasta va permite utilizatorilor sa poata crea jocul lor unic.In aceasta pagina sunt doua etape:
+                        <ul>
+                            <li>Prima etapa: alegerea timer-ului si dificultatii jocului nostru.</li>
+                           Tipul dificultatii va duce la numarul de runde corespunzatoare jocului nostru adica la numarul de alegeri a raspunsurilor noastre.Jocul fiind construit pe 3 dificultatii, fiecare dificultate are un numar specific de runde:
+                           <ul>
+                            <li>Easy: 3 runde</li>
+                            <li>Medium: 5 runde</li>
+                            <li>Hard: 7 runde </li>
+                           </ul>
+                           Timer-ul si dificultatea vor fi limitate de un size corespunzator: timer-ul va fi intre 10s si 30s iar dificultate va varia intre 1 si 3 unde 1 este Easy, 2 este Medium iar 3 este Hard.
+                            <li>A doua etapa: selectarea raspunsurilor corecte ce vor fi plasate in jocul nostru.</li>
+                            Dupa prima etapa stim ce dificultate am ales iar in functie de aceasta ni se va permite un numar de raspunsuri la care sa accesam. La terminarea acestora GameApi va contribui la crearea jocului respectiv astfel:
+                            acesta va genera pentru fiecare runda 2 raspunsuri gresite aleatori, in ordine aleatorie. Un astfel de exemplu este urmatorul JSON: 
+                            <img src="./images/json.JPG">
+                        </ul>
+                    </li>
+                    <li> Logout: Prin apasarea butonului acesta ne va retrimite in Login astfel orice acces extern pe URL-ul site-ului va fi restrictionat de existenta JWT si de alte sesiuni existente plasate. Logout va distruge toate sesiunile de pe pagina curenta si astfel singurele accese ale acesteia va fi pagina de Login, Register si About.</li>
+                </ul>
             </p>
 
 
 
             </p>
 
-            <span id="about">4.4</span> About
+            <span id="about"></span> <h3>6.4 About</h3>
             <p>
                 Pagina de About va contine informatii despre joc si despre versiunea acestuia.
                 Aceasta pagina se regaseste in pagina Login printr-o referinta.
             </p>
-
 
         </section>
 
